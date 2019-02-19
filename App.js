@@ -1,28 +1,24 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, AppRegistry } from 'react-native';
 
-class Blink extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { isShowingText: true };
-    setInterval(() => {
-      this.setState(previousState => (
-        { isShowingText: !previousState.isShowingText }))
-    }, 1000);
+const styles = StyleSheet.create({
+  bigBlue: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 40
+  },
+  red: {
+    color: 'red'
   }
-  render() {
-    if (!this.state.isShowingText) {
-      return null;
-    }
-    return (<Text>{this.props.text}</Text>);
-  }
-}
-export default class BlinkApp extends Component {
-
+});
+export default class LotsOfStyles extends Component {
   render() {
     return (
       <View>
-        <Blink text="I Love U" />
+        <Text style={styles.bigBlue} >Big Red Kiren Paul Check</Text>
+        <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
+        <Text style={styles.red} >Kiren Paul Check</Text>
+        <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text>
       </View>
     );
   }
