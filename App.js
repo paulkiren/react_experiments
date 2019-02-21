@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, AppRegistry } from 'react-native';
+import PizzaTransaltor from './basics/TextInput';
 
 const styles = StyleSheet.create({
   bigBlue: {
@@ -14,6 +15,7 @@ const styles = StyleSheet.create({
 export default class LotsOfStyles extends Component {
   render() {
     return (
+
       <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', }}>
         {/* <View style={{flex: 1, backgroundColor: 'powderblue'}} />
         <View style={{flex: 2, backgroundColor: 'skyblue'}} />
@@ -25,6 +27,7 @@ export default class LotsOfStyles extends Component {
         <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
         <Text style={styles.red} >Kiren Paul Check</Text>
         <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text> */}
+          <PizzaTransaltor name="Kiren"></PizzaTransaltor>
         </View>
 
       </View>
